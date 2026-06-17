@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>City Variations Checklist</title>
+
+<!-- PWA -->
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#090d1a">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><defs><linearGradient id='bg' x1='0' y1='0' x2='0' y2='1'><stop offset='0' stop-color='%23141c36'/><stop offset='1' stop-color='%23090d1a'/></linearGradient><linearGradient id='cv' x1='0' y1='0' x2='0' y2='1'><stop offset='0' stop-color='%23eef1f8'/><stop offset='1' stop-color='%23b08bff'/></linearGradient></defs><rect width='512' height='512' rx='96' fill='url(%23bg)'/><text x='256' y='150' font-family='Georgia,serif' font-size='66' fill='%23c9a24b' text-anchor='middle'>55</text><rect x='150' y='170' width='212' height='6' fill='%23c9a24b'/><text x='256' y='330' font-family='Arial,Helvetica,sans-serif' font-weight='bold' font-size='190' fill='url(%23cv)' text-anchor='middle'>CV</text><g fill='%237ce0ff'><rect x='96' y='372' width='34' height='52'/><rect x='140' y='350' width='34' height='74'/><rect x='184' y='386' width='34' height='38'/><rect x='228' y='330' width='40' height='94'/><rect x='278' y='366' width='34' height='58'/><rect x='322' y='348' width='34' height='76'/><rect x='366' y='378' width='34' height='46'/><rect x='410' y='360' width='30' height='64'/></g></svg>">
+<link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><defs><linearGradient id='bg' x1='0' y1='0' x2='0' y2='1'><stop offset='0' stop-color='%23141c36'/><stop offset='1' stop-color='%23090d1a'/></linearGradient><linearGradient id='cv' x1='0' y1='0' x2='0' y2='1'><stop offset='0' stop-color='%23eef1f8'/><stop offset='1' stop-color='%23b08bff'/></linearGradient></defs><rect width='512' height='512' rx='96' fill='url(%23bg)'/><text x='256' y='150' font-family='Georgia,serif' font-size='66' fill='%23c9a24b' text-anchor='middle'>55</text><rect x='150' y='170' width='212' height='6' fill='%23c9a24b'/><text x='256' y='330' font-family='Arial,Helvetica,sans-serif' font-weight='bold' font-size='190' fill='url(%23cv)' text-anchor='middle'>CV</text><g fill='%237ce0ff'><rect x='96' y='372' width='34' height='52'/><rect x='140' y='350' width='34' height='74'/><rect x='184' y='386' width='34' height='38'/><rect x='228' y='330' width='40' height='94'/><rect x='278' y='366' width='34' height='58'/><rect x='322' y='348' width='34' height='76'/><rect x='366' y='378' width='34' height='46'/><rect x='410' y='360' width='30' height='64'/></g></svg>">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="City Variations">
+<style>
+  :root{
+    --bg-0:#090d1a;
+    --bg-1:#0e1426;
+    --surface:#141b30;
+    --surface-2:#192243;
+    --line:#28324f;
+    --line-soft:#1d2640;
+    --ink:#eef1f8;
+    --ink-mute:#94a1c2;
+    --ink-faint:#5e6a89;
+    --gold:#c9a24b;
+    --chrome-a:#7ce0ff;
+    --chrome-b:#b08bff;
+    --have:#46e3a0;
+    --row-have:#0f2030;
+    --mono:ui-monospace,"SF Mono",SFMono-Regular,Menlo,Consolas,monospace;
+    --sans:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    --serif:Georgia,"Times New Roman",serif;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{
+    background:
+      radial-gradient(1200px 600px at 50% -10%, #16203c 0%, rgba(22,32,60,0) 60%),
+      linear-gradient(180deg,var(--bg-0),var(--bg-1));
+    color:var(--ink);
+    font-family:var(--sans);
+    font-size:15px;
+    line-height:1.45;
+    min-height:100vh;
+    -webkit-text-size-adjust:100%;
+  }
+  .wrap{
+    max-width:980px;margin:0 auto;
+    padding:
+      env(safe-area-inset-top) calc(16px + env(safe-area-inset-right))
+      calc(80px + env(safe-area-inset-bottom)) calc(16px + env(safe-area-inset-left));
+  }
+
+  /* ---------- Masthead ---------- */
+  header.mast{
+    padding:30px 0 14px;
+    text-align:center;
+    position:relative;
+  }
+  .eyebrow{
+    font-family:var(--mono);
+    font-size:11px;
+    letter-spacing:.34em;
+    text-transform:uppercase;
+    color:var(--gold);
+    margin:0 0 10px;
+  }
+  .title{
+    margin:0;
+    font-weight:800;
+    font-size:clamp(26px,6vw,46px);
+    letter-spacing:.02em;
+    line-height:1.02;
+    text-transform:uppercase;
+    background:linear-gradient(180deg,#ffffff 0%,#c4cde6 70%,#8f9bc0 100%);
+    -webkit-background-clip:text;
+    background-clip:text;
+    color:transparent;
+  }
+  .subtitle{
+    font-family:var(--serif);
+    font-style:italic;
+    color:var(--ink-mute);
+    margin:8px 0 0;
+    font-size:clamp(13px,2.4vw,16px);
+  }
+  /* skyline signature */
+  .skyline{display:block;width:100%;height:46px;margin:14px 0 0;opacity:.6}
+  .rule{
+    height:1px;width:100%;margin:0 0 4px;
+    background:linear-gradient(90deg,transparent,var(--gold),transparent);
+    opacity:.7;
+  }
+
+  /* ---------- Progress ---------- */
+  .progress-card{
+    background:var(--surface);
+    border:1px solid var(--line);
+    border-radius:14px;
+    padding:16px 18px;
+    margin:18px 0 14px;
+    display:flex;
+    align-items:center;
+    gap:18px;
+    flex-wrap:wrap;
+  }
+  .count{
+    font-family:var(--mono);
+    font-size:30px;
+    font-weight:700;
+    line-height:1;
+    white-space:nowrap;
+  }
+  .count small{font-size:15px;color:var(--ink-faint);font-weight:500}
+  .pct{
+    font-family:var(--mono);
+    font-size:13px;
+    color:var(--ink-mute);
+    margin-top:6px;
+  }
+  .bar-shell{flex:1 1 220px;min-width:180px}
+  .bar-track{
+    height:12px;border-radius:8px;background:#0a1122;
+    border:1px solid var(--line-soft);overflow:hidden;
+  }
+  .bar-fill{
+    height:100%;width:0%;
+    background:linear-gradient(90deg,var(--chrome-a),var(--chrome-b));
+    box-shadow:0 0 14px rgba(124,224,255,.45);
+    transition:width .35s ease;
+  }
+
+  /* ---------- Controls ---------- */
+  .controls{
+    display:flex;flex-wrap:wrap;gap:10px;align-items:center;
+    margin:0 0 14px;
+  }
+  .search{flex:1 1 220px;min-width:160px;position:relative}
+  .search input{
+    width:100%;padding:10px 12px;border-radius:10px;
+    background:var(--surface);border:1px solid var(--line);
+    color:var(--ink);font-size:14px;font-family:var(--sans);
+  }
+  .search input::placeholder{color:var(--ink-faint)}
+  select{
+    padding:10px 12px;border-radius:10px;
+    background:var(--surface);border:1px solid var(--line);
+    color:var(--ink);font-size:14px;font-family:var(--sans);
+    cursor:pointer;max-width:230px;
+  }
+  .seg{
+    display:inline-flex;border:1px solid var(--line);border-radius:10px;
+    overflow:hidden;background:var(--surface);
+  }
+  .seg button{
+    border:0;background:transparent;color:var(--ink-mute);
+    padding:10px 13px;font-size:13px;cursor:pointer;font-family:var(--sans);
+    border-right:1px solid var(--line-soft);
+  }
+  .seg button:last-child{border-right:0}
+  .seg button[aria-pressed="true"]{
+    background:var(--surface-2);color:var(--ink);font-weight:600;
+  }
+  input,select,button{outline-offset:2px}
+  input:focus-visible,select:focus-visible,button:focus-visible{
+    outline:2px solid var(--chrome-a);
+  }
+
+  /* ---------- Table ---------- */
+  .tablecard{
+    background:var(--surface);border:1px solid var(--line);
+    border-radius:14px;overflow:hidden;
+  }
+  table{width:100%;border-collapse:collapse}
+  thead th{
+    position:sticky;top:0;z-index:2;
+    background:var(--surface-2);
+    color:var(--ink-mute);
+    font-size:11px;letter-spacing:.12em;text-transform:uppercase;
+    font-weight:600;text-align:left;
+    padding:11px 12px;border-bottom:1px solid var(--line);
+    white-space:nowrap;
+  }
+  thead th.sortable{cursor:pointer;user-select:none}
+  thead th.sortable:hover{color:var(--ink)}
+  th .arrow{color:var(--gold);font-size:10px;margin-left:4px}
+  tbody tr{
+    border-bottom:1px solid var(--line-soft);cursor:pointer;
+    transition:background .12s ease;
+  }
+  tbody tr:last-child{border-bottom:0}
+  tbody tr:hover{background:#10182c}
+  tbody tr.have{background:var(--row-have)}
+  tbody tr.have:hover{background:#13263a}
+  td{padding:11px 12px;vertical-align:middle}
+  td.cb{width:42px;text-align:center}
+  td.num{
+    width:74px;font-family:var(--mono);font-size:12.5px;color:var(--ink-mute);
+    white-space:nowrap;
+  }
+  td.player{font-weight:600}
+  tr.have td.player{color:var(--have)}
+  td.team{color:var(--ink-mute);font-size:13.5px}
+  .box{
+    width:20px;height:20px;border-radius:6px;
+    border:1.5px solid var(--line);background:#0b1326;
+    display:inline-flex;align-items:center;justify-content:center;
+    color:transparent;font-size:13px;line-height:1;
+    transition:all .12s ease;
+  }
+  tr.have .box{
+    background:linear-gradient(135deg,var(--chrome-a),var(--chrome-b));
+    border-color:transparent;color:#06101e;font-weight:900;
+    box-shadow:0 0 10px rgba(124,224,255,.4);
+  }
+  .empty{padding:40px 16px;text-align:center;color:var(--ink-faint)}
+
+  /* ---------- Footer actions ---------- */
+  .actions{
+    display:flex;flex-wrap:wrap;gap:10px;margin:16px 0 0;
+    justify-content:space-between;align-items:center;
+  }
+  .act-group{display:flex;gap:10px;flex-wrap:wrap}
+  .btn{
+    border:1px solid var(--line);background:var(--surface);
+    color:var(--ink);padding:9px 15px;border-radius:10px;
+    font-size:13px;cursor:pointer;font-family:var(--sans);
+  }
+  .btn:hover{background:var(--surface-2)}
+  .btn.danger{color:#ff9a9a;border-color:#46263a}
+  .btn.danger:hover{background:#2a1622}
+  .hint{color:var(--ink-faint);font-size:12px;font-family:var(--mono)}
+
+  /* ---------- Install banner
