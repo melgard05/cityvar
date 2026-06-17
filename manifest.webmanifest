@@ -1,0 +1,14 @@
+{
+  "name": "City Variations Checklist",
+  "short_name": "City Vars",
+  "description": "2025 Topps Chrome Platinum '55 City Variations tracker",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#090d1a",
+  "theme_color": "#090d1a",
+  "icons": [
+    { "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><defs><linearGradient id='bg' x1='0' y1='0' x2='0' y2='1'><stop offset='0' stop-color='%23141c36'/><stop offset='1' stop-color='%23090d1a'/></linearGradient><linearGradient id='cv' x1='0' y1='0' x2='0' y2='1'><stop offset='0' stop-color='%23eef1f8'/><stop offset='1' stop-color='%23b08bff'/></linearGradient></defs><rect width='512' height='512' rx='96' fill='url(%23bg)'/><text x='256' y='150' font-family='Georgia,serif' font-size='66' fill='%23c9a24b' text-anchor='middle'>55</text><rect x='150' y='170' width='212' height='6' fill='%23c9a24b'/><text x='256' y='330' font-family='Arial,Helvetica,sans-serif' font-weight='bold' font-size='190' fill='url(%23cv)' text-anchor='middle'>CV</text><g fill='%237ce0ff'><rect x='96' y='372' width='34' height='52'/><rect x='140' y='350' width='34' height='74'/><rect x='184' y='386' width='34' height='38'/><rect x='228' y='330' width='40' height='94'/><rect x='278' y='366' width='34' height='58'/><rect x='322' y='348' width='34' height='76'/><rect x='366' y='378' width='34' height='46'/><rect x='410' y='360' width='30' height='64'/></g></svg>", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}
